@@ -10,6 +10,6 @@
         <a href="alumno.jsp">Alumno</a>
         <br>
         <br>
-        <a href="profesor.jsp">Profesor</a>
+        <a href="profesorLogin.jsp">Profesor</a>
     </body>
 </html>

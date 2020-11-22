@@ -4,6 +4,7 @@ import com.uacm.edu.mx.beans.Alumno;
 import com.uacm.edu.mx.beans.Examenes;
 import com.uacm.edu.mx.beans.Materia;
 import com.uacm.edu.mx.beans.Preguntas;
+import com.uacm.edu.mx.beans.Profesor;
 import com.uacm.edu.mx.beans.Respuestas;
 
 import java.sql.Connection;
@@ -504,5 +505,53 @@ public class Consultas extends Conexion {
             e.printStackTrace();
         }
         
+  }
+  
+  public ArrayList<Profesor> loginProfesor(String usuario, String password){
+      
+      ArrayList<Profesor> datos = new ArrayList<>();
+      String consultaSql = "SELECT * FROM PROFESOR WHERE usuario = ? AND password = ?";
+      try{
+          PreparedStatement pst = null;
+             
+             pst = getConexion().prepareStatement(consultaSql);
+             
+             pst.setString(1, usuario);
+             pst.setString(2, password);
+             ResultSet rs = pst.executeQuery();
+             while(rs.next()){
+                 datos.add(new Profesor(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5), rs.getString(6)));
+             }
+             rs.close();
+             }catch(Exception e){
+        e.printStackTrace();
+      }
+             return datos;
+ }
+  
+  public boolean registrarProfesor(String matricula, String nombre, String apPaterno, String apMaterno, String usuario, String password){
+      
+      PreparedStatement pst = null;
+      try{
+          
+          String consulta = "insert into profesor (matricula,nombre,apPaterno, apMaterno, usuario, password) values(?,?,?,?,?,?) ";
+          pst = getConexion().prepareStatement(consulta);
+          pst.setString(1, matricula);
+          pst.setString(2, nombre);
+          pst.setString(3, apPaterno);
+          pst.setString(4, apMaterno);
+          pst.setString(5, usuario);
+          pst.setString(6, password);
+          
+          
+          if(pst.executeUpdate() == 1){
+              return true;
+          }
+          if(getConexion() != null) getConexion().close();
+             if(pst != null) pst.close();
+      }catch(Exception e){
+          System.err.println("Error " + e);
+      }
+      return false;
   }
 }
