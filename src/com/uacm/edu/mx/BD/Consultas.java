@@ -5,7 +5,7 @@ import com.uacm.edu.mx.beans.Examenes;
 import com.uacm.edu.mx.beans.Materia;
 import com.uacm.edu.mx.beans.Preguntas;
 import com.uacm.edu.mx.beans.Respuestas;
-import com.uacm.edu.mx.beans.RespuestasBuenas;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

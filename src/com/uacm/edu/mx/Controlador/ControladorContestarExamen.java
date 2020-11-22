@@ -1,7 +1,7 @@
 package com.uacm.edu.mx.Controlador;
 
 import com.uacm.edu.mx.BD.Consultas;
-import com.uacm.edu.mx.beans.CantidadPreguntas;
+
 import com.uacm.edu.mx.beans.Preguntas;
 import com.uacm.edu.mx.beans.Respuestas;
 import java.io.IOException;

@@ -4,8 +4,7 @@ import com.uacm.edu.mx.BD.Consultas;
 import com.uacm.edu.mx.beans.Alumno;
 import com.uacm.edu.mx.beans.Preguntas;
 import com.uacm.edu.mx.beans.Respuestas;
-import com.uacm.edu.mx.beans.RespuestasBuenas;
-import com.uacm.edu.mx.beans.RespuestasMalas;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
