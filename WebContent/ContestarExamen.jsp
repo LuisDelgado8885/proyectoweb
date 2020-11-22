@@ -1,4 +1,4 @@
-<%@page import="java.util.ArrayList, com.uacm.edu.mx.beans.CantidadPreguntas"%>
+<%@page import="java.util.ArrayList"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
  

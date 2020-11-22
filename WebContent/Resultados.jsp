@@ -1,5 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import = "java.util.*, java.sql.*, com.uacm.edu.mx.beans.RespuestasBuenas,com.uacm.edu.mx.BD.Consultas" %>
+<%@page import = "java.util.*, java.sql.*,com.uacm.edu.mx.BD.Consultas" %>
 <%@page contentType="application/vnd.ms-excel" %>
 <%
     String nombreArchivo = "reporte2.xslx";
