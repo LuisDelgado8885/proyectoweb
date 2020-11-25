@@ -9,6 +9,6 @@
         <h1>Se presento una falla al guardar la pregunta</h1>
         <br>
         <br>
-        <a href="profesor.jsp">Regresar</a>
+        <a href="preguntas.jsp">Regresar</a>
     </body>
 </html>

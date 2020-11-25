@@ -14,10 +14,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author SAMS
- */
 public class Consultas extends Conexion {
     
     public boolean registrar(String matricula, String nombre, String apPaterno, String apMaterno, String usuario, String password){

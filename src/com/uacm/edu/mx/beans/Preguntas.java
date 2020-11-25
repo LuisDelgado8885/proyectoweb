@@ -7,10 +7,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author SAMS
- */
 public class Preguntas {
     
     private int idPregunta;
@@ -102,24 +98,5 @@ public class Preguntas {
         return consulta.PreguntasExamen(exam);
     }
     
-     public static ArrayList<Preguntas> getLista() throws ClassNotFoundException{
-    ArrayList<Preguntas> datos = new ArrayList<>();
-    Class.forName("com.mysql.jdbc.Driver");
-    try{
-       Connection miConexion = DriverManager.getConnection("jdbc:mysql://localhost/examen","root","l4g4rt0");
-        Statement miStatement = miConexion.createStatement();
-        String consulta = "SELECT * FROM preguntas";
-        ResultSet rs = miStatement.executeQuery(consulta);
-        
-        while(rs.next()){
-            datos.add(new Preguntas(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)));
-        }
-        rs.close();
-        miConexion.close();
-        
-    }catch(Exception e){
-        System.out.println("Ha habido un error");
-    }
-    return datos;
-  }
+    
 }
