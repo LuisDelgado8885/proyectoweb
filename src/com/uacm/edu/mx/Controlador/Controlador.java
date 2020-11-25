@@ -1,5 +1,6 @@
 package com.uacm.edu.mx.Controlador;
 
+import com.uacm.edu.mx.Error.ExcepcionSistema;
 import com.uacm.edu.mx.beans.Alumno;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -34,7 +35,10 @@ public class Controlador extends HttpServlet {
            else{
                request.getRequestDispatcher("Falla.jsp").forward(request, response);
            }
-        }
+        } catch (ExcepcionSistema e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
 }
