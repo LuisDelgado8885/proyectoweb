@@ -49,6 +49,9 @@ public class Profesor {
         if(matricula.matches("[0-9]{3}-[0-9]{2}-[0-9]{2}")) {
         	this.matricula = matricula;
         }
+        else {
+        	throw new ExcepcionSistema("No se pueden ingresar valores en ese formato");
+        }
     }
 
     public String getNombre() {
@@ -82,7 +85,7 @@ public class Profesor {
         return apMaterno;
     }
 
-    public void setApMaterno(String apMaterno)throws ExcepcionSistema {
+    public void setApMaterno(String apMaterno) throws ExcepcionSistema {
         if(apPaterno.matches("^([A-Z]{1}[a-z]+[ ]?){1,2}$")) {
         	this.apMaterno = apMaterno;
         }

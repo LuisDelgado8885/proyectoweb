@@ -6,7 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Materias</h1>
         <form name="form3" action="ControladorMaterias" method="get">
          
             Ingresa el identificador de la materia:<input type="text" name="idMateria"/>

@@ -75,7 +75,7 @@ public class Alumno {
     }
 
     public void setApPaterno(String apPaterno) throws ExcepcionSistema {
-        if(apPaterno.matches("^([A-Z]{1}[a-z]+[ ]?){1,2}$")) {
+        if(apPaterno.matches("^([A-Z]{1}[a-z]+){1}$")) {
     	
         	this.apPaterno = apPaterno;
         }
@@ -89,7 +89,7 @@ public class Alumno {
     }
 
     public void setApMaterno(String apMaterno)throws ExcepcionSistema {
-        if(apPaterno.matches("^([A-Z]{1}[a-z]+[ ]?){1,2}$")) {
+        if(apPaterno.matches("^([A-Z]{1}[a-z]+)$")) {
         	this.apMaterno = apMaterno;
         }
         else {
